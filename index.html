@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Navigation System</title>
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏫 Campus Navigation System</h1>
+        <p>Find your way around campus easily</p>
+    </header>
+
+    <main>
+
+        <section class="controls">
+
+            <h2>Find a Route</h2>
+
+            <label>Starting Location</label>
+
+            <select id="start">
+                <option value="">Select starting point</option>
+            </select>
+
+            <label>Destination</label>
+
+            <select id="destination">
+                <option value="">Select destination</option>
+            </select>
+
+            <button onclick="findRoute()">
+                🧭 Find Route
+            </button>
+
+            <button class="secondary" onclick="clearRoute()">
+                Clear Route
+            </button>
+
+            <div id="result">
+                <h3>Route Information</h3>
+                <p>Select locations to find a route.</p>
+            </div>
+
+        </section>
+
+        <section class="map-section">
+            <div id="map"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Campus Navigation System © 2026</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
